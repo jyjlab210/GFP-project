@@ -66,7 +66,7 @@ Before running any scripts, clone this repository to your local machine so that 
 ### Notes on Large Files (Git LFS)
 Some files in the repository are managed using Git Large File Storage (LFS).
 To ensure these files are downloaded correctly:
-- Install Git LFS (one time only)
+- Install Git LFS (one time only):
   git lfs install
 - After cloning, pull the LFS-managed files:
   git lfs pull
