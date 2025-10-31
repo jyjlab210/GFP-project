@@ -10,7 +10,7 @@ The repository provides all input structures and scripts required to reproduce t
  
 ## Repository Structure
  
-### 1-2-preparation_oj_initial_structures
+### 1-2-preparation_of_initial_structures
 - Original PDB structures of the GFP variants used in the project.  
 - Prepared structures of each GFP variant and their corresponding chromophores.  
 - Students use these files as starting points for parameterization and obtention of topology and coordinate files for MD simulations.
