@@ -1,0 +1,8 @@
+#Acceptor                DonorH           Donor   Frames         Frac      AvgDist       AvgAng
+VAL_61@O             SHG_65@H10       SHG_65@N1     1717       0.5723       2.8748     160.3011
+GLU_220@OE1          SHG_65@H08      SHG_65@OG1     1498       0.4993       2.6768     160.4551
+GLU_220@OE2          SHG_65@H08      SHG_65@OG1     1316       0.4387       2.6749     160.1535
+GLU_220@OE2          SHG_65@H11      SHG_65@ND1       14       0.0047       2.8186     143.7548
+VAL_61@O             SHG_65@H08      SHG_65@OG1        2       0.0007       2.7253     162.1321
+GLU_220@OE1          SHG_65@H11      SHG_65@ND1        2       0.0007       2.9323     150.3086
+PHE_64@O             SHG_65@H08      SHG_65@OG1        1       0.0003       2.7938     164.0430

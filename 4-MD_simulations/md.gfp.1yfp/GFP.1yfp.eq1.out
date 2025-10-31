@@ -1,0 +1,505 @@
+
+          -------------------------------------------------------
+          Amber 24 PMEMD                              2024
+          -------------------------------------------------------
+
+| PMEMD implementation of SANDER, Release 24
+
+|  Compiled date/time: Mon Feb  3 14:39:30 2025
+| Run on 09/14/2025 at 09:43:36
+
+|   Executable path: /home/jacosta19/software/amber24/bin/pmemd.cuda_SPFP
+| Working directory: /home/jacosta19/Desktop/GFP_MD/1yfp
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|   MDIN: eq1.in                                                                
+|  MDOUT: GFP.1yfp.eq1.out                                                      
+| INPCRD: GFP.1yfp.h.ncrst                                                      
+|   PARM: GFP.1yfp.top                                                          
+| RESTRT: GFP.1yfp.eq1.ncrst                                                    
+|   REFC: GFP.1yfp.min.ncrst                                                    
+|  MDVEL: mdvel                                                                 
+|   MDEN: mden                                                                  
+|  MDCRD: GFP.1yfp.eq1.nc                                                       
+| MDINFO: mdinfo                                                                
+|  MDFRC: mdfrc                                                                 
+
+
+ Here is the input file:
+
+eq1 temp = 300, k = 15 V=cte (ntb=1)                                           
+&cntrl                                                                         
+ nstlim = 10000, dt = 0.002,                                                   
+ ntx = 7, irest = 1, iwrap=0, cut=9., ioutfm = 1,                              
+ ntpr = 500, ntwr = 500, ntwx =500,                                            
+ tempi = 300., temp0 = 300.,                                                   
+ ntt = 1,                                                                      
+ ntb = 1,                                                                      
+ ntc = 2, ntf = 2,                                                             
+ ntr = 1,                                                                      
+ restraint_wt = 2.0, restraintmask = ":1-225@CA"                               
+&end                                                                           
+                                                                               
+
+
+Note: ig = -1. Setting random seed to   131401 based on wallclock time in 
+      microseconds.
+| irandom = 1, using AMBER's internal random number generator (default).
+| WARNING: ntx set to 7; the file type is now auto-detected; please update to ntx = 5.
+ 
+|--------------------- INFORMATION ----------------------
+| GPU (CUDA) Version of PMEMD in use: NVIDIA GPU IN USE.
+|                    Version 18.0.0
+| 
+|                      03/25/2018
+| 
+| Implementation by:
+|                    Ross C. Walker     (SDSC)
+|                    Scott Le Grand     (nVIDIA)
+| 
+| Version 18 performance extensions by:
+|                    David Cerutti     (Rutgers)
+| 
+| Precision model in use:
+|      [SPFP] - Single Precision Forces, 64-bit Fixed Point
+|               Accumulation. (Default)
+| 
+|--------------------------------------------------------
+ 
+|----------------- CITATION INFORMATION -----------------
+|
+|    When publishing work that utilized the CUDA version
+|    of AMBER, please cite the following in addition to
+|    the regular AMBER citations:
+|
+|  - Romelia Salomon-Ferrer; Andreas W. Goetz; Duncan
+|    Poole; Scott Le Grand; Ross C. Walker "Routine
+|    microsecond molecular dynamics simulations with
+|    AMBER - Part II: Particle Mesh Ewald", J. Chem.
+|    Theory Comput., 2013, 9 (9), pp3878-3888,
+|    DOI: 10.1021/ct400314y.
+|
+|  - Andreas W. Goetz; Mark J. Williamson; Dong Xu;
+|    Duncan Poole; Scott Le Grand; Ross C. Walker
+|    "Routine microsecond molecular dynamics simulations
+|    with AMBER - Part I: Generalized Born", J. Chem.
+|    Theory Comput., 2012, 8 (5), pp1542-1555.
+|
+|  - Scott Le Grand; Andreas W. Goetz; Ross C. Walker
+|    "SPFP: Speed without compromise - a mixed precision
+|    model for GPU accelerated molecular dynamics
+|    simulations.", Comp. Phys. Comm., 2013, 184
+|    pp374-380, DOI: 10.1016/j.cpc.2012.09.022
+|
+|--------------------------------------------------------
+ 
+|------------------- GPU DEVICE INFO --------------------
+|
+|            CUDA_VISIBLE_DEVICES: not set
+|   CUDA Capable Devices Detected:      1
+|           CUDA Device ID in use:      0
+|                CUDA Device Name: NVIDIA GeForce RTX 2080 Ti
+|     CUDA Device Global Mem Size:  10825 MB
+| CUDA Device Num Multiprocessors:     68
+|           CUDA Device Core Freq:   1.54 GHz
+|
+|--------------------------------------------------------
+ 
+ 
+| Conditional Compilation Defines Used:
+| PUBFFT
+| BINTRAJ
+| CUDA
+| EMIL
+
+| Largest sphere to fit in unit cell has radius =    34.138
+
+| New format PARM file being parsed.
+| Version =    1.000 Date = 09/09/25 Time = 15:45:24
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+ getting box info from netcdf restart file
+ NATOM  =   34150 NTYPES =      16 NBONH =   32333 MBONA  =    1856
+ NTHETH =    4021 MTHETA =    2510 NPHIH =    8146 MPHIA  =    7859
+ NHPARM =       0 NPARM  =       0 NNB   =   60513 NRES   =   10422
+ NBONA  =    1856 NTHETA =    2510 NPHIA =    7859 NUMBND =      78
+ NUMANG =     179 NPTRA  =     199 NATYP =      39 NPHB   =       0
+ IFBOX  =       1 NMXRS  =      30 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+| Coordinate Index Table dimensions:    17   14   13
+| Direct force subcell size =     5.0129    5.2114    5.2520
+
+     BOX TYPE: RECTILINEAR
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+
+General flags:
+     imin    =       0, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       7, irest   =       1, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =     500, ntrx    =       1, ntwr    =     500
+     iwrap   =       0, ntwx    =     500, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       2, ntb     =       1, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =   9.00000, intdiel =   1.00000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       1
+     restraint_wt =   2.00000
+
+Molecular dynamics:
+     nstlim  =     10000, nscm    =         0, nrespa  =         1
+     t       =   0.00000, dt      =   0.00200, vlimit  =  -1.00000
+
+Berendsen (weak-coupling) temperature regulation:
+     temp0   = 300.00000, tempi   = 300.00000, tautp   =   1.00000
+
+SHAKE:
+     ntc     =       2, jfastw  =       0
+     tol     =   0.00001
+
+| Intermolecular bonds treatment:
+|     no_intermolecular_bonds =       1
+
+| Energy averages sample interval:
+|     ene_avg_sampling =     500
+
+Ewald parameters:
+     verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
+     vdwmeth =       1, eedmeth =       1, netfrc  =       1
+     Box X =   85.219   Box Y =   72.959   Box Z =   68.277
+     Alpha =   90.000   Beta  =   90.000   Gamma =   90.000
+     NFFT1 =   96       NFFT2 =   80       NFFT3 =   72
+     Cutoff=    9.000   Tol   =0.100E-04
+     Ewald Coefficient =  0.30768
+     Interpolation order =    4
+
+    LOADING THE CONSTRAINED ATOMS AS GROUPS
+
+
+   5.  REFERENCE ATOM COORDINATES
+
+  default_name                                                                    
+     Mask :1-225@CA; matches   224 atoms
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+ begin time read from input coords =    20.000 ps
+
+ 
+ Number of triangulated 3-point waters found:    10191
+
+     Sum of charges from parm topology file =  -0.00000110
+     Forcing neutrality...
+
+| Dynamic Memory, Types Used:
+| Reals             1127552
+| Integers          1356654
+
+| Nonbonded Pairs Initial Allocation:     7786200
+
+| GPU memory information (estimate):
+| KB of GPU memory in use:    122815
+| KB of CPU memory in use:     66367
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+
+ NSTEP =      500   TIME(PS) =      21.000  TEMP(K) =   301.54  PRESS =     0.0
+ Etot   =    -80736.6740  EKtot   =     21007.6543  EPtot      =   -101744.3283
+ BOND   =       685.1552  ANGLE   =      1872.1313  DIHED      =      2892.5622
+ 1-4 NB =       820.7021  1-4 EEL =     10710.2734  VDWAALS    =     11958.6206
+ EELEC  =   -130730.8278  EHBOND  =         0.0000  RESTRAINT  =        47.0547
+ EAMBER (non-restraint)  =   -101791.3830
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     1000   TIME(PS) =      22.000  TEMP(K) =   301.05  PRESS =     0.0
+ Etot   =    -80732.1879  EKtot   =     20973.4512  EPtot      =   -101705.6391
+ BOND   =       667.0699  ANGLE   =      1856.1331  DIHED      =      2892.0119
+ 1-4 NB =       807.8818  1-4 EEL =     10698.1879  VDWAALS    =     12083.6990
+ EELEC  =   -130757.7016  EHBOND  =         0.0000  RESTRAINT  =        47.0788
+ EAMBER (non-restraint)  =   -101752.7180
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     1500   TIME(PS) =      23.000  TEMP(K) =   300.15  PRESS =     0.0
+ Etot   =    -80688.5808  EKtot   =     20910.8340  EPtot      =   -101599.4148
+ BOND   =       697.0250  ANGLE   =      1874.5926  DIHED      =      2887.5189
+ 1-4 NB =       821.7496  1-4 EEL =     10774.9848  VDWAALS    =     12201.6515
+ EELEC  =   -130912.3814  EHBOND  =         0.0000  RESTRAINT  =        55.4443
+ EAMBER (non-restraint)  =   -101654.8590
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     2000   TIME(PS) =      24.000  TEMP(K) =   299.27  PRESS =     0.0
+ Etot   =    -80612.3406  EKtot   =     20849.8652  EPtot      =   -101462.2058
+ BOND   =       702.3887  ANGLE   =      1912.2669  DIHED      =      2851.9343
+ 1-4 NB =       800.3347  1-4 EEL =     10711.1927  VDWAALS    =     12398.4057
+ EELEC  =   -130890.7139  EHBOND  =         0.0000  RESTRAINT  =        51.9851
+ EAMBER (non-restraint)  =   -101514.1909
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     2500   TIME(PS) =      25.000  TEMP(K) =   301.19  PRESS =     0.0
+ Etot   =    -80650.2975  EKtot   =     20983.1406  EPtot      =   -101633.4381
+ BOND   =       622.7622  ANGLE   =      1888.2824  DIHED      =      2924.3786
+ 1-4 NB =       817.5625  1-4 EEL =     10749.0386  VDWAALS    =     12082.4842
+ EELEC  =   -130770.9111  EHBOND  =         0.0000  RESTRAINT  =        52.9644
+ EAMBER (non-restraint)  =   -101686.4025
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     3000   TIME(PS) =      26.000  TEMP(K) =   303.79  PRESS =     0.0
+ Etot   =    -80698.1824  EKtot   =     21164.4492  EPtot      =   -101862.6317
+ BOND   =       695.4810  ANGLE   =      1826.4294  DIHED      =      2929.2313
+ 1-4 NB =       800.5069  1-4 EEL =     10764.4420  VDWAALS    =     12262.9128
+ EELEC  =   -131195.5082  EHBOND  =         0.0000  RESTRAINT  =        53.8730
+ EAMBER (non-restraint)  =   -101916.5047
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     3500   TIME(PS) =      27.000  TEMP(K) =   298.83  PRESS =     0.0
+ Etot   =    -80745.3819  EKtot   =     20819.0078  EPtot      =   -101564.3898
+ BOND   =       664.2550  ANGLE   =      1862.2487  DIHED      =      2893.2932
+ 1-4 NB =       820.8306  1-4 EEL =     10763.9380  VDWAALS    =     11838.1380
+ EELEC  =   -130460.7962  EHBOND  =         0.0000  RESTRAINT  =        53.7029
+ EAMBER (non-restraint)  =   -101618.0926
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     4000   TIME(PS) =      28.000  TEMP(K) =   300.44  PRESS =     0.0
+ Etot   =    -80761.3867  EKtot   =     20930.9746  EPtot      =   -101692.3613
+ BOND   =       703.3839  ANGLE   =      1881.5650  DIHED      =      2857.2391
+ 1-4 NB =       807.8457  1-4 EEL =     10713.6244  VDWAALS    =     12214.3221
+ EELEC  =   -130927.6702  EHBOND  =         0.0000  RESTRAINT  =        57.3288
+ EAMBER (non-restraint)  =   -101749.6901
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     4500   TIME(PS) =      29.000  TEMP(K) =   299.46  PRESS =     0.0
+ Etot   =    -80739.8800  EKtot   =     20862.9004  EPtot      =   -101602.7804
+ BOND   =       669.7268  ANGLE   =      1929.5680  DIHED      =      2887.7416
+ 1-4 NB =       812.9021  1-4 EEL =     10706.8516  VDWAALS    =     12074.7209
+ EELEC  =   -130747.3464  EHBOND  =         0.0000  RESTRAINT  =        63.0549
+ EAMBER (non-restraint)  =   -101665.8353
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     5000   TIME(PS) =      30.000  TEMP(K) =   301.09  PRESS =     0.0
+ Etot   =    -80731.1772  EKtot   =     20976.5137  EPtot      =   -101707.6909
+ BOND   =       726.8243  ANGLE   =      1865.4193  DIHED      =      2876.7090
+ 1-4 NB =       800.9811  1-4 EEL =     10729.5064  VDWAALS    =     12042.0863
+ EELEC  =   -130800.4104  EHBOND  =         0.0000  RESTRAINT  =        51.1932
+ EAMBER (non-restraint)  =   -101758.8841
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     5500   TIME(PS) =      31.000  TEMP(K) =   301.11  PRESS =     0.0
+ Etot   =    -80718.7129  EKtot   =     20977.6367  EPtot      =   -101696.3496
+ BOND   =       653.3951  ANGLE   =      1894.7805  DIHED      =      2902.4091
+ 1-4 NB =       799.6282  1-4 EEL =     10713.4053  VDWAALS    =     12005.8439
+ EELEC  =   -130721.9466  EHBOND  =         0.0000  RESTRAINT  =        56.1350
+ EAMBER (non-restraint)  =   -101752.4846
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     6000   TIME(PS) =      32.000  TEMP(K) =   301.20  PRESS =     0.0
+ Etot   =    -80727.0993  EKtot   =     20983.8496  EPtot      =   -101710.9489
+ BOND   =       708.5197  ANGLE   =      1875.2111  DIHED      =      2892.0275
+ 1-4 NB =       807.6302  1-4 EEL =     10757.7357  VDWAALS    =     12216.4136
+ EELEC  =   -131020.8584  EHBOND  =         0.0000  RESTRAINT  =        52.3716
+ EAMBER (non-restraint)  =   -101763.3205
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     6500   TIME(PS) =      33.000  TEMP(K) =   300.11  PRESS =     0.0
+ Etot   =    -80768.7727  EKtot   =     20907.8477  EPtot      =   -101676.6204
+ BOND   =       653.0425  ANGLE   =      1890.2473  DIHED      =      2875.1435
+ 1-4 NB =       838.3537  1-4 EEL =     10791.1399  VDWAALS    =     11982.6876
+ EELEC  =   -130761.4627  EHBOND  =         0.0000  RESTRAINT  =        54.2278
+ EAMBER (non-restraint)  =   -101730.8481
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     7000   TIME(PS) =      34.000  TEMP(K) =   301.24  PRESS =     0.0
+ Etot   =    -80759.7240  EKtot   =     20986.7012  EPtot      =   -101746.4251
+ BOND   =       655.9760  ANGLE   =      1931.0042  DIHED      =      2851.2887
+ 1-4 NB =       827.9546  1-4 EEL =     10742.0528  VDWAALS    =     12117.5841
+ EELEC  =   -130925.6566  EHBOND  =         0.0000  RESTRAINT  =        53.3711
+ EAMBER (non-restraint)  =   -101799.7962
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     7500   TIME(PS) =      35.000  TEMP(K) =   301.01  PRESS =     0.0
+ Etot   =    -80794.5969  EKtot   =     20970.8809  EPtot      =   -101765.4778
+ BOND   =       650.6935  ANGLE   =      1860.0217  DIHED      =      2897.6868
+ 1-4 NB =       821.6642  1-4 EEL =     10741.6148  VDWAALS    =     12177.6432
+ EELEC  =   -130978.0280  EHBOND  =         0.0000  RESTRAINT  =        63.2259
+ EAMBER (non-restraint)  =   -101828.7037
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     8000   TIME(PS) =      36.000  TEMP(K) =   301.05  PRESS =     0.0
+ Etot   =    -80828.7692  EKtot   =     20973.5684  EPtot      =   -101802.3375
+ BOND   =       663.3247  ANGLE   =      1897.8140  DIHED      =      2885.6438
+ 1-4 NB =       808.9550  1-4 EEL =     10744.5370  VDWAALS    =     11965.9975
+ EELEC  =   -130818.6505  EHBOND  =         0.0000  RESTRAINT  =        50.0409
+ EAMBER (non-restraint)  =   -101852.3784
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     8500   TIME(PS) =      37.000  TEMP(K) =   299.74  PRESS =     0.0
+ Etot   =    -80789.7838  EKtot   =     20882.3770  EPtot      =   -101672.1607
+ BOND   =       653.5169  ANGLE   =      1828.3936  DIHED      =      2890.9724
+ 1-4 NB =       821.2714  1-4 EEL =     10733.0657  VDWAALS    =     12084.9517
+ EELEC  =   -130737.5472  EHBOND  =         0.0000  RESTRAINT  =        53.2147
+ EAMBER (non-restraint)  =   -101725.3754
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     9000   TIME(PS) =      38.000  TEMP(K) =   302.29  PRESS =     0.0
+ Etot   =    -80811.7198  EKtot   =     21060.1172  EPtot      =   -101871.8369
+ BOND   =       663.3220  ANGLE   =      1822.4159  DIHED      =      2912.3346
+ 1-4 NB =       825.1589  1-4 EEL =     10682.6051  VDWAALS    =     12169.7657
+ EELEC  =   -131001.0922  EHBOND  =         0.0000  RESTRAINT  =        53.6531
+ EAMBER (non-restraint)  =   -101925.4901
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =     9500   TIME(PS) =      39.000  TEMP(K) =   299.91  PRESS =     0.0
+ Etot   =    -80813.6322  EKtot   =     20894.1309  EPtot      =   -101707.7631
+ BOND   =       654.1684  ANGLE   =      1799.9795  DIHED      =      2873.0527
+ 1-4 NB =       816.8043  1-4 EEL =     10700.8613  VDWAALS    =     12295.8555
+ EELEC  =   -130906.1009  EHBOND  =         0.0000  RESTRAINT  =        57.6162
+ EAMBER (non-restraint)  =   -101765.3793
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =    10000   TIME(PS) =      40.000  TEMP(K) =   302.30  PRESS =     0.0
+ Etot   =    -80829.5925  EKtot   =     21060.6758  EPtot      =   -101890.2683
+ BOND   =       625.5655  ANGLE   =      1880.8660  DIHED      =      2871.1806
+ 1-4 NB =       822.2669  1-4 EEL =     10709.6024  VDWAALS    =     11994.3945
+ EELEC  =   -130849.9121  EHBOND  =         0.0000  RESTRAINT  =        55.7679
+ EAMBER (non-restraint)  =   -101946.0362
+ ------------------------------------------------------------------------------
+
+
+      A V E R A G E S   O V E R      20 S T E P S
+
+
+ NSTEP =    10000   TIME(PS) =      40.000  TEMP(K) =   300.84  PRESS =     0.0
+ Etot   =    -80746.9246  EKtot   =     20958.8288  EPtot      =   -101705.7534
+ BOND   =       670.7798  ANGLE   =      1872.4685  DIHED      =      2887.2180
+ 1-4 NB =       815.0492  1-4 EEL =     10731.9330  VDWAALS    =     12108.4089
+ EELEC  =   -130845.7761  EHBOND  =         0.0000  RESTRAINT  =        54.1652
+ EAMBER (non-restraint)  =   -101759.9186
+ ------------------------------------------------------------------------------
+
+
+      R M S  F L U C T U A T I O N S
+
+
+ NSTEP =    10000   TIME(PS) =      40.000  TEMP(K) =     1.13  PRESS =     0.0
+ Etot   =        55.7590  EKtot   =        79.0149  EPtot      =       102.7126
+ BOND   =        26.8934  ANGLE   =        33.5712  DIHED      =        20.4871
+ 1-4 NB =        10.3195  1-4 EEL =        28.2874  VDWAALS    =       131.4876
+ EELEC  =       148.1894  EHBOND  =         0.0000  RESTRAINT  =         4.0574
+ EAMBER (non-restraint)  =        98.6552
+ ------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+   5.  TIMINGS
+--------------------------------------------------------------------------------
+
+|  NonSetup CPU Time in Major Routines:
+|
+|     Routine           Sec        %
+|     ------------------------------
+|     Nonbond           0.80   16.18
+|     Bond              0.00    0.00
+|     Angle             0.00    0.00
+|     Dihedral          0.00    0.00
+|     Shake             0.05    0.99
+|     RunMD             4.08   82.61
+|     Other             0.01    0.22
+|     ------------------------------
+|     Total             4.94
+
+|  PME Nonbond Pairlist CPU Time:
+|
+|     Routine              Sec        %
+|     ---------------------------------
+|     Set Up Cit           0.00    0.00
+|     Build List           0.00    0.00
+|     ---------------------------------
+|     Total                0.00    0.00
+
+|  PME Direct Force CPU Time:
+|
+|     Routine              Sec        %
+|     ---------------------------------
+|     NonBonded Calc       0.00    0.00
+|     Exclude Masked       0.00    0.00
+|     Other                0.01    0.13
+|     ---------------------------------
+|     Total                0.01    0.13
+
+|  PME Reciprocal Force CPU Time:
+|
+|     Routine              Sec        %
+|     ---------------------------------
+|     1D bspline           0.00    0.00
+|     Grid Charges         0.00    0.00
+|     Scalar Sum           0.00    0.00
+|     Gradient Sum         0.00    0.00
+|     FFT                  0.00    0.00
+|     ---------------------------------
+|     Total                0.00    0.00
+
+|  Final Performance Info:
+|     -----------------------------------------------------
+|     Average timings for last    9500 steps:
+|     Elapsed(s) =       4.69 Per Step(ms) =       0.49
+|         ns/day =     350.22   seconds/ns =     246.70
+|
+|     Average timings for all steps:
+|     Elapsed(s) =       4.94 Per Step(ms) =       0.49
+|         ns/day =     350.04   seconds/ns =     246.83
+|     -----------------------------------------------------
+
+|  Setup CPU time:            0.48 seconds
+|  NonSetup CPU time:         4.94 seconds
+|  Total CPU time:            5.42 seconds     0.00 hours
+
+|  Setup wall time:           1    seconds
+|  NonSetup wall time:        5    seconds
+|  Total wall time:           6    seconds     0.00 hours

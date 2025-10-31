@@ -1,0 +1,5 @@
+#Acceptor                DonorH           Donor   Frames         Frac      AvgDist       AvgAng
+VAL_59@O             GYG_63@H10       GYG_63@N1     2398       0.7993       2.8442     156.7558
+SER_201@OG           GYG_63@H12       GYG_63@OH      220       0.0733       2.7880     159.2108
+HIE_144@ND1          GYG_63@H12       GYG_63@OH        6       0.0020       2.8882     159.2006
+ASN_142@O            GYG_63@H12       GYG_63@OH        2       0.0007       2.7825     138.2662

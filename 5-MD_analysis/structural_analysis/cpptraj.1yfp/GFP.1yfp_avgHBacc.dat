@@ -1,0 +1,13 @@
+#Acceptor                DonorH           Donor   Frames         Frac      AvgDist       AvgAng
+GYG_63@O2           ARG_92@HH22      ARG_92@NH2     2723       0.9077       2.7990     160.0949
+GYG_63@O3              GLN_65@H        GLN_65@N      980       0.3267       2.8491     148.0434
+GYG_63@O3             TYR_88@HH       TYR_88@OH      495       0.1650       2.8378     155.2790
+GYG_63@O2           GLN_65@HE21      GLN_65@NE2      470       0.1567       2.8628     150.8654
+GYG_63@O2           ARG_92@HH12      ARG_92@NH1      112       0.0373       2.8806     145.6836
+GYG_63@OH            TYR_141@HH      TYR_141@OH       76       0.0253       2.8779     160.3471
+GYG_63@O2          GLN_179@HE21     GLN_179@NE2       76       0.0253       2.8997     152.8627
+GYG_63@O3           GLN_90@HE21      GLN_90@NE2       58       0.0193       2.9073     162.1897
+GYG_63@O2           GLN_65@HE22      GLN_65@NE2        5       0.0017       2.8217     161.1776
+GYG_63@O2           GLN_90@HE21      GLN_90@NE2        3       0.0010       2.8959     153.9742
+GYG_63@O3           GLN_65@HE22      GLN_65@NE2        2       0.0007       2.9364     167.4357
+GYG_63@OH             HIE_144@H       HIE_144@N        1       0.0003       2.9648     158.9173

@@ -1,0 +1,9 @@
+#Acceptor                DonorH           Donor   Frames         Frac      AvgDist       AvgAng
+VAL_58@O             TWG_62@H15       TWG_62@N1     2174       0.7247       2.8573     157.0909
+VAL_58@O             TWG_62@H10      TWG_62@OG1      561       0.1870       2.7811     155.6874
+LEU_61@O             TWG_62@H10      TWG_62@OG1      545       0.1817       2.8117     160.8843
+GLU_217@OE2          TWG_62@H10      TWG_62@OG1      474       0.1580       2.7093     161.0654
+SER_200@OG           TWG_62@H16      TWG_62@NE1      447       0.1490       2.8817     157.6627
+GLU_217@OE2          TWG_62@H16      TWG_62@NE1      251       0.0837       2.8183     149.6627
+GLU_217@OE1          TWG_62@H10      TWG_62@OG1      174       0.0580       2.7078     161.0775
+GLU_217@OE1          TWG_62@H16      TWG_62@NE1      124       0.0413       2.8273     149.6247
