@@ -1,0 +1,1247 @@
+log started: Wed Oct 22 17:21:28 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.water.tip3p
+----- Source: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPC3POLBOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> loadoff atomic_ions.lib
+Loading library: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+> loadoff tip3pbox.off
+Loading library: /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib/tip3pbox.off
+Loading: TIP3PBOX
+> set default PBRadii mbondi3
+Using ArgH and AspGluO modified Bondi2 radii
+> 
+> loadAmberPrep TWG.prep
+Loading Prep file: ./TWG.prep
+Loaded UNIT: TWG
+> loadAmberParams TWG.2.frcmod
+Loading parameters: ./TWG.2.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> loadAmberParams TWG.1.frcmod
+Loading parameters: ./TWG.1.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> 
+> unit = loadpdb ../../1-2-preparation_of_initial_structures/prepared_GFP_variants/GFP.2wsn.pdb
+Loading PDB file: ../../1-2-preparation_of_initial_structures/prepared_GFP_variants/GFP.2wsn.pdb
+-- residue 7: duplicate [ CA] atoms (total 2)
+-- residue 7: duplicate [ CB] atoms (total 2)
+-- residue 7: duplicate [ CD1] atoms (total 2)
+-- residue 7: duplicate [ CD2] atoms (total 2)
+-- residue 7: duplicate [ CG] atoms (total 2)
+-- residue 30: duplicate [ CA] atoms (total 3)
+-- residue 30: duplicate [ CB] atoms (total 3)
+-- residue 30: duplicate [ OG] atoms (total 3)
+-- residue 34: duplicate [ CA] atoms (total 2)
+-- residue 34: duplicate [ CB] atoms (total 2)
+-- residue 34: duplicate [ CD] atoms (total 2)
+-- residue 34: duplicate [ CG] atoms (total 2)
+-- residue 34: duplicate [ OE1] atoms (total 2)
+-- residue 34: duplicate [ OE2] atoms (total 2)
+-- residue 42: duplicate [ CA] atoms (total 2)
+-- residue 42: duplicate [ CB] atoms (total 2)
+-- residue 42: duplicate [ CD1] atoms (total 2)
+-- residue 42: duplicate [ CD2] atoms (total 2)
+-- residue 42: duplicate [ CG] atoms (total 2)
+-- residue 47: duplicate [ CA] atoms (total 2)
+-- residue 47: duplicate [ CB] atoms (total 2)
+-- residue 47: duplicate [ CD1] atoms (total 2)
+-- residue 47: duplicate [ CG1] atoms (total 2)
+-- residue 47: duplicate [ CG2] atoms (total 2)
+-- residue 77: duplicate [ CA] atoms (total 2)
+-- residue 77: duplicate [ CB] atoms (total 2)
+-- residue 77: duplicate [ CD] atoms (total 2)
+-- residue 77: duplicate [ CE] atoms (total 2)
+-- residue 77: duplicate [ CG] atoms (total 2)
+-- residue 77: duplicate [ NZ] atoms (total 2)
+-- residue 88: duplicate [ CA] atoms (total 2)
+-- residue 88: duplicate [ CB] atoms (total 2)
+-- residue 88: duplicate [ CD] atoms (total 2)
+-- residue 88: duplicate [ CG] atoms (total 2)
+-- residue 88: duplicate [ OE1] atoms (total 2)
+-- residue 88: duplicate [ OE2] atoms (total 2)
+-- residue 111: duplicate [ CA] atoms (total 2)
+-- residue 111: duplicate [ CB] atoms (total 2)
+-- residue 111: duplicate [ CD] atoms (total 2)
+-- residue 111: duplicate [ CE] atoms (total 2)
+-- residue 111: duplicate [ CG] atoms (total 2)
+-- residue 111: duplicate [ NZ] atoms (total 2)
+-- residue 115: duplicate [ CA] atoms (total 2)
+-- residue 115: duplicate [ CB] atoms (total 2)
+-- residue 115: duplicate [ CG] atoms (total 2)
+-- residue 115: duplicate [ OD1] atoms (total 2)
+-- residue 115: duplicate [ OD2] atoms (total 2)
+-- residue 122: duplicate [ CA] atoms (total 2)
+-- residue 122: duplicate [ CB] atoms (total 2)
+-- residue 122: duplicate [ CD] atoms (total 2)
+-- residue 122: duplicate [ CG] atoms (total 2)
+-- residue 122: duplicate [ OE1] atoms (total 2)
+-- residue 122: duplicate [ OE2] atoms (total 2)
+-- residue 127: duplicate [ C] atoms (total 2)
+-- residue 127: duplicate [ CA] atoms (total 2)
+-- residue 127: duplicate [ CB] atoms (total 2)
+-- residue 127: duplicate [ CG] atoms (total 2)
+-- residue 127: duplicate [ N] atoms (total 2)
+-- residue 127: duplicate [ O] atoms (total 2)
+-- residue 127: duplicate [ OD1] atoms (total 2)
+-- residue 127: duplicate [ OD2] atoms (total 2)
+-- residue 141: duplicate [ C] atoms (total 2)
+-- residue 141: duplicate [ CA] atoms (total 2)
+-- residue 141: duplicate [ CB] atoms (total 2)
+-- residue 141: duplicate [ CD1] atoms (total 2)
+-- residue 141: duplicate [ CD2] atoms (total 2)
+-- residue 141: duplicate [ CE1] atoms (total 2)
+-- residue 141: duplicate [ CE2] atoms (total 2)
+-- residue 141: duplicate [ CG] atoms (total 2)
+-- residue 141: duplicate [ CZ] atoms (total 2)
+-- residue 141: duplicate [ N] atoms (total 2)
+-- residue 141: duplicate [ O] atoms (total 2)
+-- residue 141: duplicate [ OH] atoms (total 2)
+-- residue 142: duplicate [ C] atoms (total 2)
+-- residue 142: duplicate [ CA] atoms (total 2)
+-- residue 142: duplicate [ CB] atoms (total 2)
+-- residue 142: duplicate [ CG] atoms (total 2)
+-- residue 142: duplicate [ N] atoms (total 2)
+-- residue 142: duplicate [ ND2] atoms (total 2)
+-- residue 142: duplicate [ O] atoms (total 2)
+-- residue 142: duplicate [ OD1] atoms (total 2)
+-- residue 143: duplicate [ C] atoms (total 2)
+-- residue 143: duplicate [ CA] atoms (total 2)
+-- residue 143: duplicate [ CB] atoms (total 2)
+-- residue 143: duplicate [ CD1] atoms (total 2)
+-- residue 143: duplicate [ CD2] atoms (total 2)
+-- residue 143: duplicate [ CE1] atoms (total 2)
+-- residue 143: duplicate [ CE2] atoms (total 2)
+-- residue 143: duplicate [ CG] atoms (total 2)
+-- residue 143: duplicate [ CZ] atoms (total 2)
+-- residue 143: duplicate [ N] atoms (total 2)
+-- residue 143: duplicate [ O] atoms (total 2)
+-- residue 143: duplicate [ OH] atoms (total 2)
+-- residue 144: duplicate [ C] atoms (total 2)
+-- residue 144: duplicate [ CA] atoms (total 2)
+-- residue 144: duplicate [ CB] atoms (total 2)
+-- residue 144: duplicate [ CD1] atoms (total 2)
+-- residue 144: duplicate [ CG1] atoms (total 2)
+-- residue 144: duplicate [ CG2] atoms (total 2)
+-- residue 144: duplicate [ N] atoms (total 2)
+-- residue 144: duplicate [ O] atoms (total 2)
+-- residue 151: duplicate [ CA] atoms (total 2)
+-- residue 151: duplicate [ CB] atoms (total 2)
+-- residue 151: duplicate [ CG2] atoms (total 2)
+-- residue 151: duplicate [ OG1] atoms (total 2)
+-- residue 162: duplicate [ CA] atoms (total 2)
+-- residue 162: duplicate [ CB] atoms (total 2)
+-- residue 162: duplicate [ CG] atoms (total 2)
+-- residue 162: duplicate [ ND2] atoms (total 2)
+-- residue 162: duplicate [ OD1] atoms (total 2)
+-- residue 164: duplicate [ CA] atoms (total 2)
+-- residue 164: duplicate [ CB] atoms (total 2)
+-- residue 164: duplicate [ CD] atoms (total 2)
+-- residue 164: duplicate [ CE] atoms (total 2)
+-- residue 164: duplicate [ CG] atoms (total 2)
+-- residue 164: duplicate [ NZ] atoms (total 2)
+-- residue 168: duplicate [ C] atoms (total 2)
+-- residue 168: duplicate [ CA] atoms (total 2)
+-- residue 168: duplicate [ CB] atoms (total 2)
+-- residue 168: duplicate [ CG] atoms (total 2)
+-- residue 168: duplicate [ N] atoms (total 2)
+-- residue 168: duplicate [ ND2] atoms (total 2)
+-- residue 168: duplicate [ O] atoms (total 2)
+-- residue 168: duplicate [ OD1] atoms (total 2)
+-- residue 170: duplicate [ CA] atoms (total 2)
+-- residue 170: duplicate [ CB] atoms (total 2)
+-- residue 170: duplicate [ CD] atoms (total 2)
+-- residue 170: duplicate [ CG] atoms (total 2)
+-- residue 170: duplicate [ OE1] atoms (total 2)
+-- residue 170: duplicate [ OE2] atoms (total 2)
+-- residue 178: duplicate [ CA] atoms (total 2)
+-- residue 178: duplicate [ CB] atoms (total 2)
+-- residue 178: duplicate [ CG] atoms (total 2)
+-- residue 178: duplicate [ OD1] atoms (total 2)
+-- residue 178: duplicate [ OD2] atoms (total 2)
+-- residue 182: duplicate [ C] atoms (total 2)
+-- residue 182: duplicate [ CA] atoms (total 2)
+-- residue 182: duplicate [ CB] atoms (total 2)
+-- residue 182: duplicate [ CD] atoms (total 2)
+-- residue 182: duplicate [ CG] atoms (total 2)
+-- residue 182: duplicate [ N] atoms (total 2)
+-- residue 182: duplicate [ NE2] atoms (total 2)
+-- residue 182: duplicate [ O] atoms (total 2)
+-- residue 182: duplicate [ OE1] atoms (total 2)
+-- residue 184: duplicate [ CA] atoms (total 3)
+-- residue 184: duplicate [ CB] atoms (total 3)
+-- residue 184: duplicate [ CG2] atoms (total 3)
+-- residue 184: duplicate [ OG1] atoms (total 3)
+-- residue 188: duplicate [ C] atoms (total 2)
+-- residue 188: duplicate [ CA] atoms (total 2)
+-- residue 188: duplicate [ CB] atoms (total 2)
+-- residue 188: duplicate [ CG] atoms (total 2)
+-- residue 188: duplicate [ N] atoms (total 2)
+-- residue 188: duplicate [ O] atoms (total 2)
+-- residue 188: duplicate [ OD1] atoms (total 2)
+-- residue 188: duplicate [ OD2] atoms (total 2)
+-- residue 218: duplicate [ CA] atoms (total 2)
+-- residue 218: duplicate [ CB] atoms (total 2)
+-- residue 218: duplicate [ CD1] atoms (total 2)
+-- residue 218: duplicate [ CD2] atoms (total 2)
+-- residue 218: duplicate [ CG] atoms (total 2)
+-- residue 222: duplicate [ CA] atoms (total 2)
+-- residue 222: duplicate [ CB] atoms (total 2)
+-- residue 222: duplicate [ CG1] atoms (total 2)
+-- residue 222: duplicate [ CG2] atoms (total 2)
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Atom names in each residue should be unique.
+     (Same-name atoms are handled by using the first
+      occurrence and by ignoring the rest.
+      Many instances of duplicate atom names usually come
+      from alternate conformations in the PDB file.)
+
+Matching PDB residue names to LEaP variables.
+Mapped residue GLY, term: Terminal/beginning, seq. number: 0 to: NGLY.
+  Added missing heavy atom: .R<GLU 5>.A<CG 8>
+  Added missing heavy atom: .R<GLU 5>.A<CD 11>
+  Added missing heavy atom: .R<GLU 5>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 5>.A<OE2 13>
+  Added missing heavy atom: .R<GLU 6>.A<CG 8>
+  Added missing heavy atom: .R<GLU 6>.A<CD 11>
+  Added missing heavy atom: .R<GLU 6>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 6>.A<OE2 13>
+  Added missing heavy atom: .R<GLU 130>.A<CD 11>
+  Added missing heavy atom: .R<GLU 130>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 130>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 131>.A<CG 8>
+  Added missing heavy atom: .R<ASP 131>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 131>.A<OD2 10>
+  Added missing heavy atom: .R<GLN 155>.A<CG 8>
+  Added missing heavy atom: .R<GLN 155>.A<CD 11>
+  Added missing heavy atom: .R<GLN 155>.A<OE1 12>
+  Added missing heavy atom: .R<GLN 155>.A<NE2 13>
+  Added missing heavy atom: .R<THR 228>.A<CA 3>
+  Added missing heavy atom: .R<THR 228>.A<CB 5>
+  Added missing heavy atom: .R<THR 228>.A<C 13>
+  Added missing heavy atom: .R<THR 228>.A<CG2 7>
+  Added missing heavy atom: .R<THR 228>.A<OG1 11>
+  Added missing heavy atom: .R<THR 228>.A<O 14>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+One sided connection. Residue (TP3) missing connect0 atom.
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+Starting new chain with TP3
+  total atoms in file: 2172
+  Leap added 2223 missing atoms according to residue templates:
+       24 Heavy
+       2199 H / lone pairs
+> check unit
+Checking 'unit'....
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+The unperturbed charge of the unit (-6.999998) is not zero.
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.128 angstroms between nonbonded atoms H and H1
+-------  .R<GLY 10>.A<H 2> and .R<WAT 230>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.256 angstroms between nonbonded atoms H and H2
+-------  .R<VAL 11>.A<H 2> and .R<WAT 236>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.440 angstroms between nonbonded atoms HZ3 and H2
+-------  .R<LYS 26>.A<HZ3 20> and .R<WAT 252>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.418 angstroms between nonbonded atoms HZ2 and H1
+-------  .R<LYS 26>.A<HZ2 19> and .R<WAT 250>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.409 angstroms between nonbonded atoms HG and H2
+-------  .R<SER 30>.A<HG 9> and .R<WAT 257>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.080 angstroms between nonbonded atoms H and H1
+-------  .R<ALA 37>.A<H 2> and .R<WAT 232>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.480 angstroms between nonbonded atoms H and H1
+-------  .R<THR 38>.A<H 2> and .R<WAT 265>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.172 angstroms between nonbonded atoms HZ1 and H2
+-------  .R<LYS 41>.A<HZ1 18> and .R<WAT 272>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 0.874 angstroms between nonbonded atoms HG1 and HE2
+-------  .R<THR 62>.A<HG1 12> and .R<HIE 179>.A<HE2 13>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.299 angstroms between nonbonded atoms H16 and HG
+-------  .R<TWG 65>.A<H16 30> and .R<SER 203>.A<HG 9>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.469 angstroms between nonbonded atoms H and H1
+-------  .R<GLN 67>.A<H 2> and .R<WAT 301>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.070 angstroms between nonbonded atoms HD2 and HG1
+-------  .R<HIE 75>.A<HD2 15> and .R<THR 228>.A<HG1 12>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.050 angstroms between nonbonded atoms HD2 and OG1
+-------  .R<HIE 75>.A<HD2 15> and .R<THR 228>.A<OG1 11>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.410 angstroms between nonbonded atoms CD2 and OG1
+-------  .R<HIE 75>.A<CD2 14> and .R<THR 228>.A<OG1 11>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.427 angstroms between nonbonded atoms HE2 and C
+-------  .R<HIE 75>.A<HE2 13> and .R<THR 228>.A<C 13>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 0.915 angstroms between nonbonded atoms HZ3 and H2
+-------  .R<LYS 77>.A<HZ3 20> and .R<WAT 309>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.478 angstroms between nonbonded atoms HZ3 and O
+-------  .R<LYS 77>.A<HZ3 20> and .R<WAT 309>.A<O 1>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.031 angstroms between nonbonded atoms HG and H
+-------  .R<SER 84>.A<HG 9> and .R<LEU 192>.A<H 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.317 angstroms between nonbonded atoms HH11 and H1
+-------  .R<ARG 94>.A<HH11 18> and .R<WAT 299>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.482 angstroms between nonbonded atoms HZ3 and H1
+-------  .R<LYS 99>.A<HZ3 20> and .R<WAT 335>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.081 angstroms between nonbonded atoms HZ1 and H1
+-------  .R<LYS 105>.A<HZ1 18> and .R<WAT 343>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.425 angstroms between nonbonded atoms HH22 and H2
+-------  .R<ARG 107>.A<HH22 22> and .R<WAT 349>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.157 angstroms between nonbonded atoms HZ3 and H2
+-------  .R<LYS 111>.A<HZ3 20> and .R<WAT 351>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.304 angstroms between nonbonded atoms HE2 and H1
+-------  .R<HIE 137>.A<HE2 13> and .R<WAT 374>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.474 angstroms between nonbonded atoms HH and HG3
+-------  .R<TYR 141>.A<HH 15> and .R<MET 216>.A<HG3 10>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 0.924 angstroms between nonbonded atoms O and H2
+-------  .R<ASN 142>.A<O 14> and .R<WAT 388>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.056 angstroms between nonbonded atoms HD22 and O
+-------  .R<ASN 142>.A<HD22 12> and .R<WAT 384>.A<O 1>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.403 angstroms between nonbonded atoms ND2 and O
+-------  .R<ASN 142>.A<ND2 10> and .R<WAT 384>.A<O 1>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.236 angstroms between nonbonded atoms OD1 and O
+-------  .R<ASN 142>.A<OD1 9> and .R<WAT 385>.A<O 1>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 0.570 angstroms between nonbonded atoms HA and H2
+-------  .R<ASN 142>.A<HA 4> and .R<WAT 387>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.275 angstroms between nonbonded atoms HA and H1
+-------  .R<ASN 142>.A<HA 4> and .R<WAT 387>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 0.941 angstroms between nonbonded atoms HA and O
+-------  .R<ASN 142>.A<HA 4> and .R<WAT 387>.A<O 1>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.421 angstroms between nonbonded atoms HG and H2
+-------  .R<SER 145>.A<HG 9> and .R<WAT 392>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.431 angstroms between nonbonded atoms H and H2
+-------  .R<LYS 164>.A<H 2> and .R<WAT 394>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 0.994 angstroms between nonbonded atoms H and H2
+-------  .R<ASN 168>.A<H 2> and .R<WAT 408>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.027 angstroms between nonbonded atoms HE22 and H2
+-------  .R<GLN 182>.A<HE22 15> and .R<WAT 399>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.047 angstroms between nonbonded atoms HG2 and H1
+-------  .R<GLN 182>.A<HG2 9> and .R<WAT 421>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.141 angstroms between nonbonded atoms HG1 and H1
+-------  .R<THR 201>.A<HG1 12> and .R<WAT 436>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.007 angstroms between nonbonded atoms HZ3 and H1
+-------  .R<LYS 207>.A<HZ3 20> and .R<WAT 441>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 0.900 angstroms between nonbonded atoms H and HE2
+-------  .R<ASP 208>.A<H 2> and .R<HIE 215>.A<HE2 13>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.461 angstroms between nonbonded atoms H and H1
+-------  .R<LYS 212>.A<H 2> and .R<WAT 446>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.088 angstroms between nonbonded atoms H and H1
+-------  .R<ASP 214>.A<H 2> and .R<WAT 285>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.430 angstroms between nonbonded atoms O and HG21
+-------  .R<ILE 227>.A<O 19> and .R<THR 228>.A<HG21 8>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.242 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 248>.A<H1 2> and .R<WAT 289>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.132 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 251>.A<H1 2> and .R<WAT 284>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.439 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 256>.A<H1 2> and .R<WAT 280>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.313 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 264>.A<H1 2> and .R<WAT 269>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.246 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 308>.A<H2 3> and .R<WAT 317>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.133 angstroms between nonbonded atoms H2 and H1
+-------  .R<WAT 322>.A<H2 3> and .R<WAT 352>.A<H1 2>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.392 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 333>.A<H1 2> and .R<WAT 417>.A<H2 3>
+
+/home/javier/Software/miniconda3/envs/AmberTools25/bin/teLeap: Warning!
+Close contact of 1.198 angstroms between nonbonded atoms H1 and H2
+-------  .R<WAT 356>.A<H1 2> and .R<WAT 358>.A<H2 3>
+Checking parameters for unit 'unit'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 52
+Unit is OK.
+> 
+> SolvateBox unit TIP3PBOX 12.0 0.9
+  Solute vdw bounding box:              44.903 54.060 56.166
+  Total bounding box for atom centers:  68.903 78.060 80.166
+  Solvent unit box:                     18.774 18.774 18.774
+The number of boxes:  x= 4  y= 5  z= 5
+  Total vdw box size:                   71.755 81.320 83.256 angstroms.
+  Volume: 485811.519 A^3 
+  Total mass 242900.912 amu,  Density 0.830 g/cc
+  Added 11845 residues.
+> addions unit Na+ 0
+7 Na+ ions required to neutralize.
+Adding 7 counter ions to "unit" using 1A grid
+Total solute charge:  -7.00  Max atom radius:   2.00
+Grid extends from solute vdw + 2.74  to  8.74
+Box:
+   enclosing:  -29.06 -34.06 -36.12   29.64 34.57 35.43
+   sized:			      98.94 93.94 91.88
+   edge:        128.00
+Resolution:      1.00 Angstrom.
+Tree depth: 7
+Volume =  2.45% of box, grid points 51285
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed Na+ in unit at (-13.39, -9.14, -9.07).
+(Replacing solvent molecule)
+Placed Na+ in unit at (-17.54, -10.33, 15.75).
+(Replacing solvent molecule)
+Placed Na+ in unit at (10.66, 15.29, -18.43).
+(Replacing solvent molecule)
+Placed Na+ in unit at (-5.53, -19.92, -2.01).
+(Replacing solvent molecule)
+Placed Na+ in unit at (-18.11, 3.39, 4.10).
+(Replacing solvent molecule)
+Placed Na+ in unit at (-1.03, 14.17, -18.34).
+(Replacing solvent molecule)
+Placed Na+ in unit at (0.97, -18.25, -11.15).
+
+Done adding ions.
+> addions unit Cl- 0
+ 0.000002 0 1 0
+0 Cl- ion required to neutralize.
+Adding 0 counter ions to "unit" using 1A grid
+> SaveAmberParm unit GFP.2wsn.top GFP.2wsn.crd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <TWG 65>:  -M   CA1  N1   H15 
+ <TWG 65>:  CA1  N3   C1   N2  
+ <TWG 65>:  C2   CB2  CA2  N2  
+ <TWG 65>:  CG2  CA2  CB2  H05 
+ <TWG 65>:  CD2  CB2  CG2  CD1 
+ <TWG 65>:  CG2  H06  CD1  NE1 
+ <TWG 65>:  CE2  CD1  NE1  H16 
+ <TWG 65>:  CZ2  CD2  CE2  NE1 
+ <TWG 65>:  CG2  CE3  CD2  CE2 
+ <TWG 65>:  CZ3  CD2  CE3  H12 
+ <TWG 65>:  CE3  CH2  CZ3  H14 
+ <TWG 65>:  CZ3  CZ2  CH2  H11 
+ <TWG 65>:  CH2  CE2  CZ2  H13 
+ <TWG 65>:  CA2  N3   C2   O2  
+ <TWG 65>:  C2   C1   N3   CA3 
+ <TWG 65>:  CA3  +M   C3   O3  
+ total 729 improper torsions applied
+ 16 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	NGLY	1
+	WAT	12062
+  )
+ (no restraints)
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 54; Notes = 0.

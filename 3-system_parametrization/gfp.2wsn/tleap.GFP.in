@@ -1,0 +1,24 @@
+
+addPath /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/cmd
+addPath /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/lib
+addPath /home/javier/Software/miniconda3/envs/AmberTools25/dat/leap/parm
+
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+loadoff atomic_ions.lib
+loadoff tip3pbox.off
+set default PBRadii mbondi3
+
+loadAmberPrep TWG.prep
+loadAmberParams TWG.2.frcmod
+loadAmberParams TWG.1.frcmod
+
+unit = loadpdb ../../1-2-preparation_of_initial_structures/prepared_GFP_variants/GFP.2wsn.pdb
+check unit
+
+SolvateBox unit TIP3PBOX 12.0 0.9
+addions unit Na+ 0
+addions unit Cl- 0
+SaveAmberParm unit GFP.2wsn.top GFP.2wsn.crd
+quit
+
