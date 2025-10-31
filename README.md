@@ -62,7 +62,18 @@ Each script:
 Users can follow the workflow step-by-step or execute each part independently for instructional or demonstration purposes.
  
 ---
- 
+## License
+
+- **Shell scripts** (`3-system-parameterization`, `4-MD_simulations`, `5-MD_analysis`):
+  MIT License © 2025 Lab210 — see `LICENSE`.
+
+- **Data** (`1-2-preparation_oj_initial_structures` and all simulation/analysis outputs):
+  Creative Commons Attribution 4.0 International — see `LICENSE-DATA`.
+
+- **Original PDB structures** (1W7S, 1EMA, 1BFP, 1YFP, 2WSN):
+  Retrieved from the RCSB PDB under CC0 1.0 — see `SOURCES.md`.
+
+---
 ## Citation
  
 If you use this repository or adapt the project for teaching, please cite:
