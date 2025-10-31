@@ -52,8 +52,29 @@ An ultrafast and accurate scoring function for protein–protein and protein–l
  
 ## Running the Scripts
  
-Once the required software is installed, all scripts can be executed directly without modification.
- 
+Before running any scripts, clone this repository to your local machine so that all directory paths remain consistent with the provided scripts.
+
+### Cloning the Repository
+- Make sure Git is installed on your system.
+- Open a terminal.
+- Navigate to the directory where you want to store the project.
+- Clone the repository using:
+  git clone [https://github.com/jyjlab210/GFP-project.git](https://github.com/jyjlab210/GFP-project.git)
+- Change into the cloned project directory:
+  cd repository-name
+
+### Notes on Large Files (Git LFS)
+Some files in the repository are managed using Git Large File Storage (LFS).
+To ensure these files are downloaded correctly:
+- Install Git LFS (one time only)
+  git lfs install
+- After cloning, pull the LFS-managed files:
+  git lfs pull
+
+If you skip this step, the large files will appear as small pointer text files instead of the real data.
+
+### Once the required software is installed 
+All scripts can be executed directly without modification.
 Each script:
 - Automatically retrieves the necessary input files from the appropriate directory.  
 - Runs the required calculations sequentially.  
