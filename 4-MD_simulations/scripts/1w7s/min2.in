@@ -1,0 +1,15 @@
+Minimizacion de aguas y contraiones + APL
+ &cntrl
+ ntx = 1, ntrx = 1,
+ ntpr = 500, igb=0,
+ ntf = 1, ntb = 1, 
+ nsnb = 10, ntr = 1, 
+ imin = 1, maxcyc = 50000, ncyc = 25000,
+ ntmin = 1, dx0 = 0.1, drms = 0.01,
+ ntp = 0, ntc = 1, cut=9., ioutfm = 1,
+ restraint_wt=20., restraintmask=":1-228@CA",
+&end
+&wt
+type="END",
+&end
+

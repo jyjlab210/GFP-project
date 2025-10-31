@@ -1,0 +1,13 @@
+eq4 temp = 300, k = 2.5 V=cte (ntb=1)
+&cntrl
+ nstlim = 10000, dt = 0.002,
+ ntx = 7, irest = 1, iwrap=0, cut= 9.0, ioutfm = 1,
+ ntpr = 500, ntwr = 500, ntwx = 500,
+ tempi = 300., temp0 = 300.,
+ ntt = 1,
+ ntb = 1,
+ ntc = 2, ntf = 2,
+ ntr = 1,
+ restraint_wt = 0.25, restraintmask = ":1-225@CA"
+&end
+

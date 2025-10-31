@@ -1,0 +1,15 @@
+Energy minimization - no restraints
+ &cntrl
+ ntx = 1, ntrx = 1,
+ ntpr = 500, igb=0,
+ ntf = 1, ntb = 1, 
+ nsnb = 10,           
+ imin = 1, maxcyc = 25000, ncyc = 5000,
+ ntmin = 1, dx0 = 0.1, drms = 0.05,
+ ntp = 0, ntc = 1, cut=9., ioutfm = 1,
+ ntr=0,
+&end
+&wt
+type="END",
+&end
+

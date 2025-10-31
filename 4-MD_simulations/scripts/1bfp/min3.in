@@ -1,0 +1,15 @@
+Minimizacion de todo excepto CA's de la proteina
+ &cntrl
+ ntx = 1, ntrx = 1,
+ ntpr = 500, igb=0,
+ ntf = 1, ntb = 1, 
+ nsnb = 10,
+ imin = 1, maxcyc = 5000, ncyc = 1000,
+ ntmin = 1, dx0 = 0.1, drms = 0.001,
+ ntp = 0, ntc = 1, cut=9., ioutfm = 1,
+ ntr = 1, restraint_wt=20., restraintmask=":1-227@CA",
+&end
+&wt
+type="END",
+&end
+
