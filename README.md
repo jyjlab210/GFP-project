@@ -101,6 +101,6 @@ If you use this repository or adapt the project for teaching, please cite:
  
 > Acosta, J.; Sánchez-Aro, S.; Cort-Manubens, U.; Morreale, A.; Gago, F.; Del Arco, J.  
 > *The GFP rainbow: an educational tool for teaching molecular modeling and molecular dynamics.*  
-> *Journal [to be assigned]*, 2025. DOI: [to be assigned].
+> *Journal of Chemical Education*, 2026. DOI: 10.1021/acs.jchemed.5c01586.
  
 </div>
